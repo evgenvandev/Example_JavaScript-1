@@ -47,12 +47,13 @@ converttime('2016-12-31 02:07:16', 1, 0, 0);  // +1 день
 </script>
 ```
 Можно заменить вывод даты напрямую в документ:
-```html
+```js
 // Выводим дату в документ:
 	document.write(newDate);
+	document.write("<br>");
 ```
 на вывод даты в тег `<span id = "primer_date"></span>`
-```html
+```js
 // Выводим дату в тег с id = "primer_date":
 	document.getElementById('primer_date').innerHTML = newDate;
 ```
