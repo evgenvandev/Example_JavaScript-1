@@ -44,8 +44,10 @@ function converttime(onetime, day, month, year){
 // Пример использования функции converttime(onetime, day, month, year):
 converttime('2016-05-02 02:07:16', 0, 12, 0);  // +12 месяцев
 converttime('2016-12-31 02:07:16', 1, 0, 0);  // +1 день
+converttime('2020-03-12 02:07:16', 0, -4, 0);  // -4 месяца
 </script>
 ```
+<img src = "vyvod_izmenennoy_daty.jpg" width = "800">
 Можно заменить вывод даты напрямую в документ:
 ```js
 // Выводим дату в документ:
