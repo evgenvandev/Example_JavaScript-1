@@ -59,6 +59,12 @@ converttime('2020-03-12 02:07:16', 0, -4, 0);  // -4 месяца
 ```
 на вывод даты в тег `<span id = "primer_date"></span>`
 ```js
+<span id = "primer_date"></span>
+<script>
+...
+</script>
+```
+```js
 // Выводим дату в тег с id = "primer_date":
 	document.getElementById('primer_date').innerHTML = newDate;
 ```
