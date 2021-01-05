@@ -35,4 +35,4 @@ if (month == 11) textout += " декабря";
 // Выводим день, месяц и день недели
 document.write("<br><div id = 'gdata' style = 'padding-top: 4px;'> " + textout + ", " + dayNames[now.getDay()] + "</div>");
 </script>
-```js
+```
