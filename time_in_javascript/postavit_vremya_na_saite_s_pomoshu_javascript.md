@@ -10,31 +10,17 @@
 Скрипт часов на JavaScript выглядит следующим образом:
 
 ```html
-<script type="text/javascript">
-// Определяем день недели
-var dayNames = new Array("Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота");
-// Определяем месяц
-var now = new Date();
-var textout;
-var month = now.getMonth();
-var date = now.getDate();
-textout = date;
-if (month == 0) textout += " января";
-if (month == 1) textout += " февраля";
-if (month == 2) textout += " марта";
-if (month == 3) textout += " апреля";
-if (month == 4) textout += " мая";
-if (month == 5) textout += " июня";
-if (month == 6) textout += " июля";
-if (month == 7) textout += " августа";
-if (month == 8) textout += " сентября";
-if (month == 9) textout += " октября";
-if (month == 10) textout += " ноября";
-if (month == 11) textout += " декабря";
-
-// Выводим день, месяц и день недели
-document.write("<br><div id = 'gdata' style = 'padding-top: 4px;'> " + textout + ", " + dayNames[now.getDay()] + "</div>");
+<span class="trfed">Здесь время</span>
+<script>
+setInterval(function() {
+var time = new Date();
+if(time.getHours() < 10) var getHours = "0" + time.getHours(); else getHours = time.getHours();
+if(time.getMinutes() < 10) var getMinutes = "0" + time.getMinutes(); else getMinutes = time.getMinutes();
+if(time.getSeconds() < 10) var getSeconds = "0" + time.getSeconds(); else getSeconds = time.getSeconds();
+time = getHours + ":" + getMinutes + ":" + getSeconds;
+document.querySelector('.trfed').innerHTML = time;
+}, 1000);
 </script>
 ```
-Код начинается с тега `span` с классом trfed. Именно в него будет встраиваться время. Для красоты *"Здесь время"* вы можете удалить. Тег с классом `.trfed` должен располагаться перед скриптом.
+Код начинается с тега `span` с классом `.trfed`. Именно в него будет встраиваться время. Для красоты *"Здесь время"* вы можете удалить. Тег с классом `.trfed` должен располагаться перед скриптом.
 
